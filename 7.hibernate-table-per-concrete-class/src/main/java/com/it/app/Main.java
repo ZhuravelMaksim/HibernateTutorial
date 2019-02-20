@@ -68,7 +68,7 @@ public class Main {
         ContractEmployee persistentContractEmployee = contractEmployeeDAO.getOne(3L);
         if (persistentContractEmployee != null) {
             System.out.println(persistentContractEmployee.getName());
-            employeeDAO.delete(1L);
+            contractEmployeeDAO.delete(1L);
         }
     }
 }
