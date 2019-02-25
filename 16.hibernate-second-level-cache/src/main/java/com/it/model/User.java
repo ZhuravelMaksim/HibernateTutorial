@@ -1,9 +1,13 @@
 package com.it.model;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

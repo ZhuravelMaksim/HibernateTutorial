@@ -2,17 +2,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.it</groupId>
-    <artifactId>hibernate-cache</artifactId>
+    <artifactId>hibernate-second-level-cache</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>hibernate-cache</name>
+    <name>hibernate-second-level-cache</name>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-		<com.h2.driver>1.4.197</com.h2.driver>
-		<org.hibernate.core>5.4.1.Final</org.hibernate.core>
+        <com.h2.driver>1.4.197</com.h2.driver>
+        <org.hibernate.core>5.4.1.Final</org.hibernate.core>
+        <net.sf.ehcache>2.10.6</net.sf.ehcache>
+
     </properties>
     <dependencies>
         <dependency>
@@ -24,6 +26,16 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${com.h2.driver}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${org.hibernate.core}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${net.sf.ehcache}</version>
         </dependency>
     </dependencies>
 </project>
